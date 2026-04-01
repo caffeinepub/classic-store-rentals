@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Bricolage+Grotesque:wght@400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Brand colors */
+    /* #2563eb blue → oklch(0.52 0.26 264) */
+    /* #06b6d4 teal → oklch(0.68 0.15 200) */
+    /* #0f172a navy → oklch(0.13 0.03 260) */
+    /* #22c55e green → oklch(0.66 0.20 145) */
+
+    --background: 0.965 0.008 240;
+    --foreground: 0.15 0.03 260;
+    --card: 1 0 0;
+    --card-foreground: 0.15 0.03 260;
+    --popover: 1 0 0;
+    --popover-foreground: 0.15 0.03 260;
+    --primary: 0.52 0.26 264;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.68 0.15 200;
+    --secondary-foreground: 1 0 0;
+    --muted: 0.94 0.01 240;
+    --muted-foreground: 0.5 0.02 250;
+    --accent: 0.66 0.2 145;
+    --accent-foreground: 1 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.88 0.02 240;
+    --input: 0.88 0.02 240;
+    --ring: 0.52 0.26 264;
+    --navy: 0.13 0.03 260;
+    --chart-1: 0.52 0.26 264;
+    --chart-2: 0.68 0.15 200;
+    --chart-3: 0.66 0.2 145;
+    --chart-4: 0.646 0.222 41;
+    --chart-5: 0.769 0.188 70;
+    --sidebar: 0.13 0.03 260;
+    --sidebar-foreground: 0.985 0 0;
+    --sidebar-primary: 0.52 0.26 264;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.2 0.04 260;
+    --sidebar-accent-foreground: 0.985 0 0;
+    --sidebar-border: 0.25 0.04 260;
+    --sidebar-ring: 0.52 0.26 264;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Bricolage Grotesque", sans-serif;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.52 0.26 264),
+      oklch(0.68 0.15 200)
+    );
+  }
+
+  .contact-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.52 0.26 264),
+      oklch(0.68 0.15 200)
+    );
+  }
+
+  .btn-green {
+    @apply bg-accent text-accent-foreground font-semibold rounded-full px-6 py-2.5 transition-all duration-200 hover:brightness-110 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
+  }
+
+  .nav-link {
+    @apply text-slate-300 hover:text-white font-medium transition-colors duration-200 relative;
+  }
+}
